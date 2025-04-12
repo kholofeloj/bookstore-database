@@ -326,3 +326,15 @@ INSERT INTO address (countryID, street, city) VALUES
 (6, '11 Downing Street', 'London'),        -- UK
 (7, '99 Königstraße', 'Berlin'),           -- Germany
 (8, '22 Rue de Rivoli', 'Paris');          -- France
+
+
+-- insert into the customer_address table
+INSERT INTO customer_address (customerID, addressID, address_statusID) VALUES
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 3),
+(4, 4, 4),
+(5, 5, 5),
+(6, 6, 1),
+(7, 7, 2),
+(8, 8, 3);
