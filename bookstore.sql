@@ -257,3 +257,37 @@ INSERT INTO book (title, isbn, publishYear, price) VALUES
 ('The Road', '9780307387899', 2006, 13.00),
 ('Beloved', '9781400033416', 1987, 12.00),
 ('The Shining', '9780307743657', 1977, 15.00);
+
+
+
+-- insert into the address status table
+INSERT INTO address_status (statusName) VALUES
+('Home'),
+('Work'),
+('Billing'),
+('Shipping'),
+('Other');
+
+
+-- insert into author table
+INSERT INTO author (authorID, authorName) VALUES
+(1, 'Harper Lee'),
+(2, 'George Orwell'),
+(3, 'F. Scott Fitzgerald'),
+(4, 'Jane Austen'),
+(5, 'J.D. Salinger'),
+(6, 'J.R.R. Tolkien'),
+(7, 'J.K. Rowling'),
+(8, 'Paulo Coelho'),
+(9, 'Dan Brown'),
+(10, 'Khaled Hosseini'),
+(11, 'Markus Zusak'),
+(12, 'Yann Martel'),
+(13, 'George R.R. Martin'),
+(14, 'Gillian Flynn'),
+(15, 'Suzanne Collins'),
+(16, 'John Green'),
+(17, 'Stieg Larsson'),
+(18, 'Cormac McCarthy'),
+(19, 'Toni Morrison'),
+(20, 'Stephen King');
