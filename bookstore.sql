@@ -338,3 +338,28 @@ INSERT INTO customer_address (customerID, addressID, address_statusID) VALUES
 (6, 6, 1),
 (7, 7, 2),
 (8, 8, 3);
+
+
+-- Insert into the book_author table
+INSERT INTO book_author (bookID, authorID) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(11, 11),
+(12, 12),
+(13, 13),
+(14, 14),
+(15, 15),
+(16, 16),
+(17, 17),
+(18, 18),
+(19, 19),
+(20, 20);
+
