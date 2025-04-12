@@ -291,3 +291,38 @@ INSERT INTO author (authorID, authorName) VALUES
 (18, 'Cormac McCarthy'),
 (19, 'Toni Morrison'),
 (20, 'Stephen King');
+
+
+-- Insert into the book language table
+INSERT INTO book_language (languageID, languageName) VALUES
+(1, 'English'),
+(2, 'French'),
+(3, 'Spanish'),
+(4, 'German'),
+(5, 'Afrikaans');
+
+
+-- insert into shipping method table
+INSERT INTO shipping_method (methodName, cost) VALUES
+('Standard Shipping', 5.00),
+('Express Shipping', 15.00),
+('Overnight Shipping', 25.00);
+
+-- Insert into order status table
+INSERT INTO order_status (statusName) VALUES
+('Pending'),
+('Shipped'),
+('Delivered'),
+('Cancelled'),
+('Returned');
+
+-- insert into the address table
+INSERT INTO address (countryID, street, city) VALUES
+(1, '123 Long Street', 'Cape Town'),       -- South Africa
+(2, '456 Moi Avenue', 'Nairobi'),          -- Kenya
+(3, '78 Independence Ave', 'Accra'),       -- Ghana
+(4, '21 Bourdillon Road', 'Lagos'),        -- Nigeria
+(5, '100 Main Street', 'New York'),        -- USA
+(6, '11 Downing Street', 'London'),        -- UK
+(7, '99 Königstraße', 'Berlin'),           -- Germany
+(8, '22 Rue de Rivoli', 'Paris');          -- France
