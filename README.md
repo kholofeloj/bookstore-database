@@ -70,8 +70,41 @@ These define main participants in the bookstore system:
 <br/>
 
 
+## **Data Insertion**
+
+`INSERT INTO` statement populate the tables with data:
+- Countries, authors, publishers, and books are added.
+- Customer data includes names and emails.
+- Relationships between customers and addresses are created.
+- Book-author and book-publisher links are defined.
+
+<br/>
+<br/>
+<br/>
+
+
+## **Usage**
+
+The schema allows a bookstore to:
+
+- Track customer purchases
+- Link books to multiple authors
+- Maintain historical order status changes
+- Handle multi-address customers
+- Offer various shipping methods with costs
+
+
+
+
+
+
+
 ---
-# Authors
+<br/>
+<br/>
+<br/>
+
+# **Authors**
 
 - Kholofelo Mocheko
 - Enock Otieno
