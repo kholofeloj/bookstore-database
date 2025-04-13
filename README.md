@@ -9,9 +9,6 @@ Building a relational database that stores information about the bookstore's ope
 The database efficiently stores all necessary data and allows for quick Retrieval and Analysis.
 
 <br/>
-
----
-
 <br/>
 <br/>
 
@@ -33,8 +30,18 @@ USE bookStoreDB;
 <br/>
 <br/>
 
----
 
+## Reference Tables
+
+These tables store basic, reusable values:
+
+- `country`: List of countries used in addresses.
+- `adress_status`: Defines the type of a customer's address (e.g. Home, work).
+- `book_language`: Languages in which books are available.
+- `shipping_method`: shipping options with associated costs.
+- `order_status`: Tracks the order progress
+
+---
 # Authors
 
 - Kholofelo Mocheko
