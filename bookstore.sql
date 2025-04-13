@@ -363,3 +363,26 @@ INSERT INTO book_author (bookID, authorID) VALUES
 (19, 19),
 (20, 20);
 
+
+-- Insert into the publisher table
+INSERT INTO publisher (publisherID, publisherName) VALUES
+(1, 'Harper Perennial Modern Classics'),
+(2, 'Signet Classics'),
+(3, 'Scribner'),
+(4, 'Penguin Classics'),
+(5, 'Little, Brown and Company'),
+(6, 'Mariner Books'),
+(7, 'Scholastic'),
+(8, 'HarperOne'),
+(9, 'Anchor Books'),
+(10, 'Riverhead Books'),
+(11, 'Knopf Books for Young Readers'),
+(12, 'Harvest Books'),
+(13, 'Bantam Books'),
+(14, 'Broadway Books'),
+(15, 'Scholastic Press'),
+(16, 'Dutton Books'),
+(17, 'Vintage Crime/Black Lizard'),
+(18, 'Vintage'),
+(19, 'Vintage International'),
+(20, 'Anchor');
