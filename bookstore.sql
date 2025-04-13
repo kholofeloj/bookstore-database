@@ -2,7 +2,7 @@
 -- Creating the database: bookStoreDB and its related 15 tables
 
 CREATE DATABASE bookStoreDB;
-USE bookstoredb;
+USE bookStoreDB;
 
 CREATE TABLE country(
     countryID INT PRIMARY KEY,
@@ -115,14 +115,106 @@ CREATE TABLE order_history(
     FOREIGN KEY (order_statusID) REFERENCES order_status(order_statusID)
 );
 
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--                      Inserting data into the tables
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
--- adding data to the customer table. 
+-- 1. Insert into the country table
+INSERT INTO country (countryID, countryName) VALUES
+(1, 'South Africa'),
+(2, 'Kenya'),
+(3, 'Ghana'),
+(4, 'Nigeria'),
+(5, 'USA'),
+(6, 'UK'),
+(7, 'Germany'),
+(8, 'France');
 
-insert into customer
-Values(1, "Mary", "Magdala", "MaryMagdala@gmail.com");
-insert into customer (firstname, lastname, email)
-Values
+
+-- 2. Insert into the address status table
+INSERT INTO address_status (statusName) VALUES
+('Home'),
+('Work'),
+('Billing'),
+('Shipping'),
+('Other');
+
+
+-- 3. Insert into the publisher table
+INSERT INTO publisher (publisherID, publisherName) VALUES
+(1, 'Harper Perennial Modern Classics'),
+(2, 'Signet Classics'),
+(3, 'Scribner'),
+(4, 'Penguin Classics'),
+(5, 'Little, Brown and Company'),
+(6, 'Mariner Books'),
+(7, 'Scholastic'),
+(8, 'HarperOne'),
+(9, 'Anchor Books'),
+(10, 'Riverhead Books'),
+(11, 'Knopf Books for Young Readers'),
+(12, 'Harvest Books'),
+(13, 'Bantam Books'),
+(14, 'Broadway Books'),
+(15, 'Scholastic Press'),
+(16, 'Dutton Books'),
+(17, 'Vintage Crime/Black Lizard'),
+(18, 'Vintage'),
+(19, 'Vintage International'),
+(20, 'Anchor');
+
+-- 4. Insert into author table
+INSERT INTO author (authorID, authorName) VALUES
+(1, 'Harper Lee'),
+(2, 'George Orwell'),
+(3, 'F. Scott Fitzgerald'),
+(4, 'Jane Austen'),
+(5, 'J.D. Salinger'),
+(6, 'J.R.R. Tolkien'),
+(7, 'J.K. Rowling'),
+(8, 'Paulo Coelho'),
+(9, 'Dan Brown'),
+(10, 'Khaled Hosseini'),
+(11, 'Markus Zusak'),
+(12, 'Yann Martel'),
+(13, 'George R.R. Martin'),
+(14, 'Gillian Flynn'),
+(15, 'Suzanne Collins'),
+(16, 'John Green'),
+(17, 'Stieg Larsson'),
+(18, 'Cormac McCarthy'),
+(19, 'Toni Morrison'),
+(20, 'Stephen King');
+
+
+-- 5. Insert into the book language table
+INSERT INTO book_language (languageID, languageName) VALUES
+(1, 'English'),
+(2, 'French'),
+(3, 'Spanish'),
+(4, 'German'),
+(5, 'Afrikaans');
+
+
+-- 6. Insert into shipping method table
+INSERT INTO shipping_method (methodName, cost) VALUES
+('Standard Shipping', 5.00),
+('Express Shipping', 15.00),
+('Overnight Shipping', 25.00);
+
+-- 7. Insert into order status table
+INSERT INTO order_status (statusName) VALUES
+('Pending'),
+('Shipped'),
+('Delivered'),
+('Cancelled'),
+('Returned');
+
+-- 8. Insert into the customer table
+INSERT INTO customer (firstname, lastname, email)
+VALUES
+("Mary", "Magdala", "MaryMagdala@gmail.com"),
 ('Abel','Colleen','AbelColleen@gmail.com'),
 ('Abel','James','AbelJames@gmail.com'),
 ('Abel','Karina','AbelKarina@gmail.com'),
@@ -219,104 +311,7 @@ Values
 ('Winters','Jane','WintersJane@gmail.com');
 
 
--- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
--- Inserting values into the tables
--- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
--- Insert into the country table
-INSERT INTO country (countryID, countryName) VALUES
-(1, 'South Africa'),
-(2, 'Kenya'),
-(3, 'Ghana'),
-(4, 'Nigeria'),
-(5, 'USA'),
-(6, 'UK'),
-(7, 'Germany'),
-(8, 'France');
-
-
--- Insert into the book table
-INSERT INTO book (title, isbn, publishYear, price) VALUES
-('To Kill a Mockingbird', '9780061120084', 1960, 14.99),
-('1984', '9780451524935', 1949, 9.99),
-('The Great Gatsby', '9780743273565', 1925, 10.99),
-('Pride and Prejudice', '9780141439518', 1813, 8.99),
-('The Catcher in the Rye', '9780316769488', 1951, 11.99),
-('The Hobbit', '9780547928227', 1937, 13.50),
-('Harry Potter and the Sorcerer''s Stone', '9780590353427', 1997, 12.99),
-('The Alchemist', '9780062315007', 1988, 16.00),
-('The Da Vinci Code', '9780307474278', 2003, 15.95),
-('The Kite Runner', '9781594631931', 2003, 13.95),
-('The Book Thief', '9780375842207', 2005, 12.50),
-('Life of Pi', '9780156027328', 2001, 11.00),
-('A Game of Thrones', '9780553593716', 1996, 18.00),
-('Gone Girl', '9780307588371', 2012, 14.50),
-('The Hunger Games', '9780439023481', 2008, 10.99),
-('The Fault in Our Stars', '9780525478812', 2012, 11.99),
-('The Girl with the Dragon Tattoo', '9780307949486', 2005, 14.95),
-('The Road', '9780307387899', 2006, 13.00),
-('Beloved', '9781400033416', 1987, 12.00),
-('The Shining', '9780307743657', 1977, 15.00);
-
-
-
--- insert into the address status table
-INSERT INTO address_status (statusName) VALUES
-('Home'),
-('Work'),
-('Billing'),
-('Shipping'),
-('Other');
-
-
--- insert into author table
-INSERT INTO author (authorID, authorName) VALUES
-(1, 'Harper Lee'),
-(2, 'George Orwell'),
-(3, 'F. Scott Fitzgerald'),
-(4, 'Jane Austen'),
-(5, 'J.D. Salinger'),
-(6, 'J.R.R. Tolkien'),
-(7, 'J.K. Rowling'),
-(8, 'Paulo Coelho'),
-(9, 'Dan Brown'),
-(10, 'Khaled Hosseini'),
-(11, 'Markus Zusak'),
-(12, 'Yann Martel'),
-(13, 'George R.R. Martin'),
-(14, 'Gillian Flynn'),
-(15, 'Suzanne Collins'),
-(16, 'John Green'),
-(17, 'Stieg Larsson'),
-(18, 'Cormac McCarthy'),
-(19, 'Toni Morrison'),
-(20, 'Stephen King');
-
-
--- Insert into the book language table
-INSERT INTO book_language (languageID, languageName) VALUES
-(1, 'English'),
-(2, 'French'),
-(3, 'Spanish'),
-(4, 'German'),
-(5, 'Afrikaans');
-
-
--- insert into shipping method table
-INSERT INTO shipping_method (methodName, cost) VALUES
-('Standard Shipping', 5.00),
-('Express Shipping', 15.00),
-('Overnight Shipping', 25.00);
-
--- Insert into order status table
-INSERT INTO order_status (statusName) VALUES
-('Pending'),
-('Shipped'),
-('Delivered'),
-('Cancelled'),
-('Returned');
-
--- insert into the address table
+-- 9. Insert into the address table
 INSERT INTO address (countryID, street, city) VALUES
 (1, '123 Long Street', 'Cape Town'),       -- South Africa
 (2, '456 Moi Avenue', 'Nairobi'),          -- Kenya
@@ -327,8 +322,31 @@ INSERT INTO address (countryID, street, city) VALUES
 (7, '99 Königstraße', 'Berlin'),           -- Germany
 (8, '22 Rue de Rivoli', 'Paris');          -- France
 
+-- 10. Insert into the book table
+INSERT INTO book (bookID, publisherID, languageID, title, isbn, publishYear, price) VALUES
+(1, 1, 1, 'To Kill a Mockingbird', '9780061120084', 1960, 14.99),
+(2, 2, 1, '1984', '9780451524935', 1949, 9.99),
+(3, 3, 1, 'The Great Gatsby', '9780743273565', 1925, 10.99),
+(4, 4, 1, 'Pride and Prejudice', '9780141439518', 1813, 8.99),
+(5, 5, 1, 'The Catcher in the Rye', '9780316769488', 1951, 11.99),
+(6, 6, 1, 'The Hobbit', '9780547928227', 1937, 13.50),
+(7, 7, 1, 'Harry Potter and the Sorcerer''s Stone', '9780590353427', 1997, 12.99),
+(8, 8, 1, 'The Alchemist', '9780062315007', 1988, 16.00),
+(9, 9, 1, 'The Da Vinci Code', '9780307474278', 2003, 15.95),
+(10, 10, 1, 'The Kite Runner', '9781594631931', 2003, 13.95),
+(11, 11, 1, 'The Book Thief', '9780375842207', 2005, 12.50),
+(12, 12, 1, 'Life of Pi', '9780156027328', 2001, 11.00),
+(13, 13, 1, 'A Game of Thrones', '9780553593716', 1996, 18.00),
+(14, 14, 1, 'Gone Girl', '9780307588371', 2012, 14.50),
+(15, 15, 1, 'The Hunger Games', '9780439023481', 2008, 10.99),
+(16, 16, 1, 'The Fault in Our Stars', '9780525478812', 2012, 11.99),
+(17, 17, 1, 'The Girl with the Dragon Tattoo', '9780307949486', 2005, 14.95),
+(18, 18, 1, 'The Road', '9780307387899', 2006, 13.00),
+(19, 19, 1, 'Beloved', '9781400033416', 1987, 12.00),
+(20, 20, 1, 'The Shining', '9780307743657', 1977, 15.00);
 
--- insert into the customer_address table
+
+-- 11. insert into the customer_address table
 INSERT INTO customer_address (customerID, addressID, address_statusID) VALUES
 (1, 1, 1),
 (2, 2, 2),
@@ -340,26 +358,25 @@ INSERT INTO customer_address (customerID, addressID, address_statusID) VALUES
 (8, 8, 3);
 
 
--- Insert into the book_author table
+-- 12. Insert into the book_author table
 INSERT INTO book_author (bookID, authorID) VALUES
-(24, 1),
-(25, 2),
-(26, 3),
-(27, 4),
-(28, 5),
-(29, 6),
-(30, 7),
-(31, 8),
-(32, 9),
-(33, 10),
-(34, 11),
-(35, 12),
-(36, 13),
-(37, 14),
-(38, 15),
-(39, 16),
-(40, 17),
-(41, 18),
-(42, 19),
-(43, 20);
-
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(11, 11),
+(12, 12),
+(13, 13),
+(14, 14),
+(15, 15),
+(16, 16),
+(17, 17),
+(18, 18),
+(19, 19),
+(20, 20);
