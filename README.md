@@ -39,7 +39,36 @@ These tables store basic, reusable values:
 - `adress_status`: Defines the type of a customer's address (e.g. Home, work).
 - `book_language`: Languages in which books are available.
 - `shipping_method`: shipping options with associated costs.
-- `order_status`: Tracks the order progress
+- `order_status`: Tracks the order progress.
+
+<br/>
+
+## Entity Tables
+
+These define main participants in the bookstore system:
+
+- `customer`: Holds customer information.
+- `author`: Contains details of book authors.
+- `publisher`: Stores publishers of books.
+- `book`: Central table for all book information including title, price, publisher, and language.
+
+<br/>
+<br/>
+
+
+## Relational Tables
+
+- `address`: links customers to a location in a specific country.
+- `customer_address`: connects customers to their addresses ith a status (e.g. Home/Work)
+- `book_author`: Handles many-to-many relationship between books and authors.
+- `cust_order`: represents a customer's order, linking to status and shipping method.
+- `order_line`: contains items in each order (books, quantity, and the price).
+- `order_history`: logs the history of status changes for each order (e.g. when it was shipped)
+
+<br/>
+<br/>
+<br/>
+
 
 ---
 # Authors
