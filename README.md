@@ -25,7 +25,7 @@ USE bookStoreDB;
 ```
 <br/>
 
-- Creates new dabase named `bookStoreDB` and sets it as the active database for the rest of the operations.
+- Creates new database named `bookStoreDB` and sets it as the active database for the rest of the operations.
 
 <br/>
 <br/>
