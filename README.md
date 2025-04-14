@@ -79,6 +79,28 @@ These define main participants in the bookstore system:
 - Book-author and book-publisher links are defined.
 
 <br/>
+
+### **Insert Order**
+
+To avoid foreign key errors, data is inserted in the tables in the following order:
+
+1. `country`
+2. `address_status`
+3. `publisher`
+4. `author`
+5. `book_language`
+6. `shipping_method`
+7. `order_status`
+8. `customer`
+9. `address`
+10. `book`
+11. `customre_address`
+12. `book_author`
+13. `cust_order`
+14. `order_line`
+15. `order_history`
+
+<br/>
 <br/>
 <br/>
 
